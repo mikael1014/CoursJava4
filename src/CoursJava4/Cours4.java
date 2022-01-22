@@ -24,25 +24,26 @@ public class Cours4 {
      * @param args the command line arguments
      */
     public static void afficher(ArrayList liste){
-        for int u = 0 u< liste.size(); u++ ;{
+        for (int u = 0; u< liste.size(); u++) {
             System.out.println(liste.get(u));}
     }
     
     public static void main(String[] args) {
         // TODO code application logic here
 
-        //Utilisateur u = new Utilisateur();
-        //GererDonnees<Utilisateur>;
+        Utilisateur u = new Utilisateur();
+        GererDonnees<Utilisateur> gererUtilisateur = new GererDonnees<Utilisateur>();
         
-        //GererDonnees<Utilisateur> gereUti        
+        //GererDonnees<Article> gererArticle = new GererDonnees<Article>();            
         
-        ArrayList<Utilisateur> liste = new ArrayList<Utilisateur>;
-        ArrayList<Utilisateur> admins = new ArrayList<Admin>;
-        ArrayList<? extends Utilisateur> tous = new ArrayList<Utilisateur>;
+        ArrayList<Utilisateur> liste = new ArrayList<Utilisateur>();
+        ArrayList<Admin> admins = new ArrayList<Admin>();
+        ArrayList<? extends Utilisateur> tous = new ArrayList<Utilisateur>();
         
-        liste.add(new Utilisateur);
-        liste.add(new Admin);
-        
+        liste.add(new Utilisateur("User","123"));
+        liste.add(new Admin("Admin","admin"));
+        System.out.println("liste Utilisateur" + liste);
+        System.out.println("liste Admin" + admins);
         // liste admins
         
         Hashtable ht = new Hashtable();
@@ -82,6 +83,9 @@ public class Cours4 {
         listeUtilisateur.add(new Utilisateur("Mikael", "toto",Droits.ADMINISTRATEUR));
         listeUtilisateur.add( new Utilisateur("login2", "motdepass2",Droits.OPERATEURSDECOMPTE)); // cas droit inexistant
         listeUtilisateur.add(new Utilisateur());
+        
+        System.out.println("liste Utilisateur" + liste);
+        System.out.println("liste Admin" + admins);
         
         //for (int i = 0; i < liste.size(); i++) {
           //    System.out.println(i + " " + liste.get(i));
